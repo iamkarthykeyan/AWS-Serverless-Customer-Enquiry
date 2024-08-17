@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+# Serverless Customer Enquiry
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+The **Serverless Customer Enquiry** project is designed to handle customer data submissions using a REST API, Lambda functions, and DynamoDB. This serverless architecture ensures scalability, low maintenance, and cost-effectiveness.
 
-In the project directory, you can run:
+## Serverless Webpage
 
-### `npm start`
+![Customer Enquiry Form](./public/assets/ServerlessWebPage.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Architecture
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![Architecture Diagram](./public/assets/Architecture.png)
 
-### `npm test`
+The architecture consists of the following components:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **API Gateway**: Handles HTTP requests and routes them to the Lambda function.
+2. **AWS Lambda**: Processes the incoming requests and interacts with DynamoDB.
+3. **DynamoDB**: Stores the customer data in a NoSQL database.
+4. **IAM Policies**: Manages permissions for Lambda functions to interact with DynamoDB.
 
-### `npm run build`
+## Successful Message
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Success Message](./public/assets/SuccessMessage200.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+When the data is successfully posted to the database, the following success message is returned:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## AWS Database - DynamoDB
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![DynamoDB Table](./public/assets/DynamoDB.png)
